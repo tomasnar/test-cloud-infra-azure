@@ -1,5 +1,11 @@
 # Configure the Microsoft Azure Provider
 terraform {
+  backend "remote" {
+    organization = "tomasnar"
+
+  workspaces {
+      name = "tomasnar-azure"
+    }
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
@@ -7,6 +13,7 @@ terraform {
     }
   }
 }
+
 provider "azurerm" {
   features {}
 }
