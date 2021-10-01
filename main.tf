@@ -6,6 +6,7 @@ terraform {
   workspaces {
       name = "tomasnar-azure"
     }
+  }
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
